@@ -1,12 +1,12 @@
 import { connect } from 'react-redux';
-import { setVisibilityFilter } from '../actions';
+import { setVisibilityFilter } from '../actions/index';
 import Link from '../components/Link';
 
 const mapStateToProps = (state, ownProps) => {
     return {
         active: ownProps.filter === state.setVisibilityFilter
     }
-}
+};
 
 const mapDispatchToProps = (dispatch, owmProps) => {
     return {
@@ -14,11 +14,11 @@ const mapDispatchToProps = (dispatch, owmProps) => {
             dispatch(setVisibilityFilter(owmProps.filter))
         }
     }
-}
+};
 
 const FilterLink = connect(
     mapStateToProps,
     mapDispatchToProps
-)(Link)
+)(Link);
 
-export default FilterLink
+export default FilterLink;

@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Todo from './Todo';
 
-const TodoList = ({ todos, onClick }) => (
+const TodoList = ({ todos, onTodoClick }) => (
     <ul>
         {todos.map(todo =>
             <Todo
@@ -14,7 +14,7 @@ const TodoList = ({ todos, onClick }) => (
     </ul>
 )
 
-TodoList.PropTypes = {
+TodoList.propTypes = {
     todos: PropTypes.arrayOf(PropTypes.shape({
         id: PropTypes.number.isRequired,
         completed: PropTypes.bool.isRequired,
